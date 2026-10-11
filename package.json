@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"description": "CLI that renders HTML files to images using playwright-core and the system chromium",
 	"scripts": {
-		"bundle": "esbuild index.js --bundle --minify --platform=node --target=node20 --external:chromium-bidi --outfile=dist/bundle.js"
+		"bundle": "esbuild index.js --bundle --minify --platform=node --target=node20 --external:chromium-bidi --outfile=usr-lib-tela/lib/bundle.js"
 	},
 	"dependencies": {
 		"esbuild": "^0.28.2",

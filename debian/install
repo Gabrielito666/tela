@@ -1,2 +1,5 @@
-./bin/tela /usr/bin/tela
-./dist/bundle.js /usr/lib/tela/bundle.js
+./bin/tela /usr/bin
+./usr-lib-tela/package.json /usr/lib/tela
+./usr-lib-tela/browsers.json /usr/lib/tela
+./usr-lib-tela/lib/bundle.js /usr/lib/tela/lib
+./usr-lib-tela/lib/webp_codec.wasm /usr/lib/tela/lib

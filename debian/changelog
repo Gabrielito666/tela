@@ -1,3 +1,12 @@
+tela (0.1.1) unstable; urgency=low
+
+  * Fix binary install path: /usr/bin/tela instead of /usr/bin/tela/tela.
+  * Ship playwright-core runtime assets (package.json, browsers.json,
+    webp_codec.wasm) mirrored under /usr/lib/tela so the bundle resolves
+    its dynamic requires.
+
+ -- Gabrielito <gabrielito@localhost>  Sun, 11 Oct 2026 15:10:33 -0300
+
 tela (0.1.0) unstable; urgency=low
 
   * Initial release: CLI that renders HTML to images using

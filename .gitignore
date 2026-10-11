@@ -5,3 +5,4 @@
 /debian/.debhelper
 /node_modules
 /dist
+/usr-lib-tela

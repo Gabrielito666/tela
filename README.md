@@ -23,7 +23,7 @@ tela is designed to be driven by coding agents (Claude Code, opencode, etc.): th
 git clone https://github.com/Gabrielito666/tela.git
 cd tela
 make build
-sudo apt install ./dist/tela_0.1.0_all.deb
+sudo apt install ./dist/tela_0.1.1_all.deb
 ```
 
 `make build` needs node + pnpm + esbuild on the build machine; the installed package only needs chromium and recommends nodejs >= 18 or bun.

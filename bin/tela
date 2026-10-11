@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-BUNDLE="/usr/lib/tela/bundle.js"
+BUNDLE="/usr/lib/tela/lib/bundle.js"
 MIN_NODE_MAJOR=18
 MIN_BUN_MAJOR=1
 
 if [[ ! -f "$BUNDLE" ]]; then
-	echo "tela: no se encontró el bundle en $BUNDLE" >&2
+	echo "tela: bundle not found at $BUNDLE" >&2
 	exit 1
 fi
 
@@ -14,7 +14,7 @@ run_with_node() {
 	local major
 	major=$(node --version | sed 's/^v\([0-9]*\).*/\1/')
 	if (( major < MIN_NODE_MAJOR )); then
-		echo "tela: node v${major} es demasiado antiguo (se requiere >= ${MIN_NODE_MAJOR})" >&2
+		echo "tela: node v${major} is too old (>= ${MIN_NODE_MAJOR} required)" >&2
 		exit 1
 	fi
 	exec node "$BUNDLE" "$@"
@@ -24,7 +24,7 @@ run_with_bun() {
 	local major
 	major=$(bun --version | cut -d. -f1)
 	if (( major < MIN_BUN_MAJOR )); then
-		echo "tela: bun v${major} es demasiado antiguo (se requiere >= ${MIN_BUN_MAJOR})" >&2
+		echo "tela: bun v${major} is too old (>= ${MIN_BUN_MAJOR} required)" >&2
 		exit 1
 	fi
 	exec bun "$BUNDLE" "$@"
@@ -35,6 +35,6 @@ if command -v node >/dev/null 2>&1; then
 elif command -v bun >/dev/null 2>&1; then
 	run_with_bun "$@"
 else
-	echo "tela: se requiere node (>= ${MIN_NODE_MAJOR}) o bun para ejecutar tela" >&2
+	echo "tela: node (>= ${MIN_NODE_MAJOR}) or bun is required to run tela" >&2
 	exit 1
 fi
