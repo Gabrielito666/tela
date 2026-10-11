@@ -1,0 +1,7 @@
+/debian/debhelper-build-stamp
+/debian/files
+/debian/tela
+/debian/tela.substvars
+/debian/.debhelper
+/node_modules
+/dist

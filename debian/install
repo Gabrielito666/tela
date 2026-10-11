@@ -1,0 +1,2 @@
+./bin/tela /usr/bin/tela
+./dist/bundle.js /usr/lib/tela/bundle.js

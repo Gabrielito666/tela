@@ -1,0 +1,6 @@
+tela (0.1.0) unstable; urgency=low
+
+  * Initial release: CLI that renders HTML to images using
+    playwright-core with the system chromium.
+
+ -- Gabrielito <gabrielito@localhost>  Sat, 10 Oct 2026 21:30:00 -0300

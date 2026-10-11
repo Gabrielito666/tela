@@ -1,0 +1,16 @@
+Source: tela
+Section: utils
+Priority: optional
+Maintainer: Gabrielito <gabrielito@localhost>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: tela
+Architecture: all
+Depends: ${misc:Depends}, chromium
+Recommends: nodejs (>= 18) | bun
+Description: CLI that renders HTML files to images
+ Renders an HTML file to png/jpeg/jpg using Playwright with the
+ system chromium (/usr/bin/chromium). Accepts -i/--input,
+ -r/--resolution (WxH, defaults to 390x844) and -o/--output.
